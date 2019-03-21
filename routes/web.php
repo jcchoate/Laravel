@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/{any?}', function () {
+Route::get('/', function () {
     return view('app');
 });
 Route::resource('Videos', 'VideoController')->middleware('auth','isAdmin');

@@ -6,7 +6,7 @@
         <form method="POST" action="/settings/account">
             {{ csrf_field() }}
 
-            {{ method_field('PATCH') }}
+            {{ method_field('PUT') }}
 
             <div class="form-group">
                 <label for="name">Name:</label>
