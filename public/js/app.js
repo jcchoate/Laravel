@@ -17419,6 +17419,12 @@ __webpack_require__.r(__webpack_exports__);
   }, {
     path: '/Categories',
     component: _components_Categories_vue__WEBPACK_IMPORTED_MODULE_2__["default"]
+  }, {
+    path: '/login',
+    component: login
+  }, {
+    path: '/register',
+    component: register
   }]
 });
 

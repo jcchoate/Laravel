@@ -18,6 +18,14 @@ export default{
         {
             path:'/Categories',
             component:Categories
+        },
+        {
+            path:'/login',
+            component:login
+        },
+        {
+            path:'/register',
+            component:register
         }
     ]
 }

@@ -13,14 +13,14 @@
 
 Route::get('/{any?}', function () {
     return view('app');
-})->middleware('Authenticate');
-Route::resource('Videos', 'VideoController')->middleware('isAdmin');
-Route::resource('Categories', 'CategoriesController');
-Route::get('/search', 'VideoController@search');
+});
+Route::resource('Videos', 'VideoController')->middleware('auth','isAdmin');
+Route::resource('Categories', 'CategoriesController')->middleware('auth');
+Route::get('/search', 'VideoController@search')->middleware('auth');
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/settings/account', 'AccountsController@edit');
+Route::get('/settings/account', 'AccountsController@edit')->middleware('auth');
 Route::get('/auth', 'AccountsController@get');
-Route::put('/settings/account', 'AccountsController@update');
+Route::put('/settings/account', 'AccountsController@update')->middleware('auth');
