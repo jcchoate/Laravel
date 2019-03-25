@@ -1,7 +1,8 @@
 <?php
 
 
-
+Route::resource('videolist', 'VideoController')->middleware('auth','isAdmin');
+// Route::get('/search', 'VideoController@search')->middleware('auth');
 
 Auth::routes();
 

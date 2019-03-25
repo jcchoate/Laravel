@@ -5,19 +5,7 @@
         <router-link to="/Categories">Home</router-link>
         <h1>HOME</h1>
         <h1>HOME</h1>
-        <h1>HOME</h1>
-        <h1>HOME</h1>
-        <h1>HOME</h1>
-        <h1>HOME</h1>
-        <h1>HOME</h1>
-        <h1>HOME</h1>
-        <h1>HOME</h1>
-        <h1>HOME</h1>
-        <h1>HOME</h1>
-        <h1>HOME</h1>
-        <h1>HOME</h1>
-        <h1>HOME</h1>
-        <h1>HOME</h1>
+
     </div>
 </template>
 

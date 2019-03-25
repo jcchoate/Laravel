@@ -1,29 +1,6 @@
 <template>
     <div class="mainspace">
-        <router-link to="/">Home</router-link>
-        <router-link to="/Videos">Home</router-link>
-        <router-link to="/Categories">Home</router-link>
-       <h1>VIDEOS</h1>
-       <h1>VIDEOS</h1>
-       <h1>VIDEOS</h1>
-       <h1>VIDEOS</h1>
-       <h1>VIDEOS</h1>
-       <h1>VIDEOS</h1>
-       <h1>VIDEOS</h1>
-       <h1>VIDEOS</h1>
-       <h1>VIDEOS</h1>
-       <h1>VIDEOS</h1>
-       <h1>VIDEOS</h1>
-       <h1>VIDEOS</h1>
-       <h1>VIDEOS</h1>
-       <h1>VIDEOS</h1>
-       <h1>VIDEOS</h1>
-       <h1>VIDEOS</h1>
-       <h1>VIDEOS</h1>
-       <h1>VIDEOS</h1>
-       <h1>VIDEOS</h1>
-       <h1>VIDEOS</h1>
-       <h1>VIDEOS</h1>
+        {videolist}
     </div>
 </template>
 
@@ -32,6 +9,11 @@
     export default {
         mounted() {
             console.log('Component mounted.')
+        },
+        getVideos() {
+           const videos = axios.get('test.test/videolist').then(({data}) => {
+               console.log(videos)
+           })
         }
     }
 </script>

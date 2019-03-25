@@ -10,9 +10,6 @@
 
 @section('content')
 <div class="container">
-    <div id="app">
-        <video-component></video-component>
-    </div>
     <div class="row justify-content-center">
         <table>
             <tr>

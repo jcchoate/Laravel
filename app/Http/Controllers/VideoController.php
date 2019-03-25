@@ -14,7 +14,7 @@ class VideoController extends Controller
      */
     public function index()
     {
-        return view('videos.index', ["videos"=>Video::all()]);
+        return response(Video::all()->jsonSerialize(), Response::HTTP_OK);
     }
 
     // For search bar

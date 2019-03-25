@@ -5,9 +5,9 @@ import routes from './routes'
 
 Vue.use(VueRouter, axios);
 
-Vue.component('home-component', require('./components/Home.vue').default);
-Vue.component('video-component', require('./components/Videos.vue'));
-Vue.component('category-component', require('./components/Categories.vue'));
+Vue.component('HomeComponent', require('./components/Home.vue').default);
+Vue.component('VideoComponent', require('./components/Videos.vue'));
+Vue.component('CategoryComponent', require('./components/Categories.vue'));
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

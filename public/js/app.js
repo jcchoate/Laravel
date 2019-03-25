@@ -1854,32 +1854,15 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   mounted: function mounted() {
     console.log('Component mounted.');
+  },
+  getVideos: function getVideos() {
+    var videos = axios.get('test.test/videolist').then(function (_ref) {
+      var data = _ref.data;
+      console.log(videos);
+    });
   }
 });
 
@@ -2534,60 +2517,9 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    { staticClass: "mainspace" },
-    [
-      _c("router-link", { attrs: { to: "/" } }, [_vm._v("Home")]),
-      _vm._v(" "),
-      _c("router-link", { attrs: { to: "/Videos" } }, [_vm._v("Home")]),
-      _vm._v(" "),
-      _c("router-link", { attrs: { to: "/Categories" } }, [_vm._v("Home")]),
-      _vm._v(" "),
-      _c("h1", [_vm._v("VIDEOS")]),
-      _vm._v(" "),
-      _c("h1", [_vm._v("VIDEOS")]),
-      _vm._v(" "),
-      _c("h1", [_vm._v("VIDEOS")]),
-      _vm._v(" "),
-      _c("h1", [_vm._v("VIDEOS")]),
-      _vm._v(" "),
-      _c("h1", [_vm._v("VIDEOS")]),
-      _vm._v(" "),
-      _c("h1", [_vm._v("VIDEOS")]),
-      _vm._v(" "),
-      _c("h1", [_vm._v("VIDEOS")]),
-      _vm._v(" "),
-      _c("h1", [_vm._v("VIDEOS")]),
-      _vm._v(" "),
-      _c("h1", [_vm._v("VIDEOS")]),
-      _vm._v(" "),
-      _c("h1", [_vm._v("VIDEOS")]),
-      _vm._v(" "),
-      _c("h1", [_vm._v("VIDEOS")]),
-      _vm._v(" "),
-      _c("h1", [_vm._v("VIDEOS")]),
-      _vm._v(" "),
-      _c("h1", [_vm._v("VIDEOS")]),
-      _vm._v(" "),
-      _c("h1", [_vm._v("VIDEOS")]),
-      _vm._v(" "),
-      _c("h1", [_vm._v("VIDEOS")]),
-      _vm._v(" "),
-      _c("h1", [_vm._v("VIDEOS")]),
-      _vm._v(" "),
-      _c("h1", [_vm._v("VIDEOS")]),
-      _vm._v(" "),
-      _c("h1", [_vm._v("VIDEOS")]),
-      _vm._v(" "),
-      _c("h1", [_vm._v("VIDEOS")]),
-      _vm._v(" "),
-      _c("h1", [_vm._v("VIDEOS")]),
-      _vm._v(" "),
-      _c("h1", [_vm._v("VIDEOS")])
-    ],
-    1
-  )
+  return _c("div", { staticClass: "mainspace" }, [
+    _vm._v("\n    {videolist}\n")
+  ])
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -17350,9 +17282,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vue_router__WEBPACK_IMPORTED_MODULE_1__["default"], axios__WEBPACK_IMPORTED_MODULE_2___default.a);
-vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('home-component', __webpack_require__(/*! ./components/Home.vue */ "./resources/js/components/Home.vue").default);
-vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('video-component', __webpack_require__(/*! ./components/Videos.vue */ "./resources/js/components/Videos.vue"));
-vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('category-component', __webpack_require__(/*! ./components/Categories.vue */ "./resources/js/components/Categories.vue"));
+vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('HomeComponent', __webpack_require__(/*! ./components/Home.vue */ "./resources/js/components/Home.vue").default);
+vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('VideoComponent', __webpack_require__(/*! ./components/Videos.vue */ "./resources/js/components/Videos.vue"));
+vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('CategoryComponent', __webpack_require__(/*! ./components/Categories.vue */ "./resources/js/components/Categories.vue"));
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
