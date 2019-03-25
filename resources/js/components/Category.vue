@@ -1,12 +1,12 @@
 <template>
     <div id="app">
         <div class="title">
-            <h4>Name: {{this.$props.name}}</h4>
+            <h4>{{this.$props.category}}</h4>
         </div>
-        <div class="info">
-            Description: {{this.$props.description}}
+        <div class="dropdown">
+            {{this.$props.name}}
             <br/>
-            Category: {{this.$props.category}}
+            {{this.$props.description}}
         </div>
     </div>
 </template>
