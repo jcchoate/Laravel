@@ -10,6 +10,14 @@ export default{
         {
             path:'/',
             component:Home
+        },
+        {
+            path:'/Videos',
+            component:Videos
+        },
+        {
+            path:'/Categories',
+            component:Categories
         }
     ]
 }

@@ -1,7 +1,18 @@
 @extends('layouts.app')
+<link rel="stylesheet" href="{{ asset('dist/css/app.css') }}">
+@if (app()->isLocal())
+  <script src="{{ asset('js/app.js') }}"></script>
+@else
+  <script src="{{ mix('js/manifest.js') }}"></script>
+  <script src="{{ mix('js/vendor.js') }}"></script>
+  <script src="{{ mix('js/app.js') }}"></script>
+@endif
 
 @section('content')
 <div class="container">
+    <div id="app">
+        <video-component></video-component>
+    </div>
     <div class="row justify-content-center">
         <table>
             <tr>

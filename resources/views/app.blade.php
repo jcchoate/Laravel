@@ -11,7 +11,6 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
-    <script src-"/js/app.js"></script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -24,9 +23,9 @@
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
             <div class="container">
-                <a class="navbar-brand" href="/">
+                <router-link class="navbar-brand" to="/">
                     {{ config('app.name', 'Laravel') }}
-                </a>
+                </router-link>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -34,8 +33,8 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
-                        <li><a href="/Videos">Videos</a></li>
-                        <li><a href="/Categories">Categories</a></li>
+                        <li><router-link to="/Videos">Videos</router-link></li>
+                        <li><router-link to="/Categories">Categories</router-link></li>
                         <li></li>
                     </ul>
 
