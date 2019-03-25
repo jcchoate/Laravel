@@ -3,12 +3,13 @@ import VueRouter from 'vue-router';
 import axios from 'axios';
 import routes from './routes'
 
-Vue.use(VueRouter, axios);
+Vue.use(VueRouter);
+
 
 Vue.component('HomeComponent', require('./components/Home.vue').default);
 Vue.component('VideoComponent', require('./components/Videos.vue'));
 Vue.component('CategoryComponent', require('./components/Categories.vue'));
-
+Vue.component('VideoIndexed', require('./components/Video.vue'))
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
