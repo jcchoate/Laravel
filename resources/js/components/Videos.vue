@@ -1,6 +1,13 @@
 <template>
     <div class="mainspace">
        <h1>VIDEOS</h1>
+       <h1>VIDEOS</h1>
+       <h1>VIDEOS</h1>
+       <h1>VIDEOS</h1>
+       <h1>VIDEOS</h1>
+       <h1>VIDEOS</h1>
+       <h1>VIDEOS</h1>
+       <h1>VIDEOS</h1>
     </div>
 </template>
 

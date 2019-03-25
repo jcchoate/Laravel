@@ -1,6 +1,6 @@
 <template>
     <div class="mainspace">
-
+        <h1>HOME</h1>
     </div>
 </template>
 

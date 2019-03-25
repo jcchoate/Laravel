@@ -10,22 +10,6 @@ export default{
         {
             path:'/',
             component:Home
-        },
-        {
-            path:'/Videos',
-            component:Videos
-        },
-        {
-            path:'/Categories',
-            component:Categories
-        },
-        {
-            path:'/login',
-            component:login
-        },
-        {
-            path:'/register',
-            component:register
         }
     ]
 }

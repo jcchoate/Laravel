@@ -55,7 +55,7 @@ class VideoController extends Controller
             'categories'=>'required|min:3|max:50'
         ]);
         Video::create(request(['name', 'description', 'category']));
-        return redirect('/videos');
+        return redirect('/Videos');
     }
 
     /**
@@ -96,7 +96,7 @@ class VideoController extends Controller
         $video->category = request('categories');
         $video->save();
 
-        return redirect('/videos');
+        return redirect('/Videos');
     }
 
     /**
@@ -108,6 +108,6 @@ class VideoController extends Controller
     public function destroy($id)
     {
         Video::find($id)->delete();
-        return redirect('/videos');
+        return redirect('/Videos');
     }
 }

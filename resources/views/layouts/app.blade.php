@@ -6,8 +6,10 @@
     <title>Document</title>
 </head>
 <body>
+<div id="app">
     <div class="container">
         @yield('content')
     </div>
+</div>
 </body>
 </html>

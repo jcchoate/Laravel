@@ -1818,6 +1818,13 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   mounted: function mounted() {
     console.log('Component mounted.');
@@ -2374,9 +2381,16 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "mainspace" })
+  return _vm._m(0)
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "mainspace" }, [_c("h1", [_vm._v("HOME")])])
+  }
+]
 render._withStripped = true
 
 
@@ -2406,6 +2420,20 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "mainspace" }, [
+      _c("h1", [_vm._v("VIDEOS")]),
+      _vm._v(" "),
+      _c("h1", [_vm._v("VIDEOS")]),
+      _vm._v(" "),
+      _c("h1", [_vm._v("VIDEOS")]),
+      _vm._v(" "),
+      _c("h1", [_vm._v("VIDEOS")]),
+      _vm._v(" "),
+      _c("h1", [_vm._v("VIDEOS")]),
+      _vm._v(" "),
+      _c("h1", [_vm._v("VIDEOS")]),
+      _vm._v(" "),
+      _c("h1", [_vm._v("VIDEOS")]),
+      _vm._v(" "),
       _c("h1", [_vm._v("VIDEOS")])
     ])
   }
@@ -17413,18 +17441,6 @@ __webpack_require__.r(__webpack_exports__);
   routes: [{
     path: '/',
     component: _components_Home_vue__WEBPACK_IMPORTED_MODULE_0__["default"]
-  }, {
-    path: '/Videos',
-    component: _components_Videos_vue__WEBPACK_IMPORTED_MODULE_1__["default"]
-  }, {
-    path: '/Categories',
-    component: _components_Categories_vue__WEBPACK_IMPORTED_MODULE_2__["default"]
-  }, {
-    path: '/login',
-    component: login
-  }, {
-    path: '/register',
-    component: register
   }]
 });
 
