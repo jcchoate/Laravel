@@ -1,16 +1,18 @@
 
 <template>
-    <div class="mainspace">
+    <div class="text-center">
         <h1>CATEGORIES</h1>
+        <div class="mainspace">
+
         <Category 
-            v-for="video in videos"
-            :key="video.id"
-            v-bind:name="video.name"
-            v-bind:description="video.description"
-            v-bind:category="video.categories"
+            v-for="category in categories"
+            :key="category.id"
+            v-bind:category="category"
         >
             
         </Category>
+
+        </div>
     </div>
 </template>
 
@@ -20,25 +22,31 @@ import axios from 'axios';
     export default {
         data() {
             return {
-                videos: []
+                categories: []
             }
         },
         methods: {
             getVideos() {
-               const videos = axios.get('/videolist').then(res => {
-                   this.videos = res.data
+               const videos = axios.get('/video?groupBy=categories').then(res => {
+                   this.categories = res.data
+                   
                });
             }
 
         },
         beforeMount(){
             this.getVideos()
+
+        },
+        mounted(){
         }
     }
 </script>
 
 <style scoped>
-
+    .mainspace{
+        display: flex
+    }
 
 
 </style>

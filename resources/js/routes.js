@@ -12,11 +12,11 @@ export default{
             component:Home
         },
         {
-            path:'/Videos',
+            path:'/videos',
             component:Videos
         },
         {
-            path:'/Categories',
+            path:'/categories',
             component:Categories
         }
     ]

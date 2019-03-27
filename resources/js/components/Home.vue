@@ -1,5 +1,5 @@
 <template>
-    <div class="mainspace">
+    <div class="mainspace text-center">
         <h1>HOME</h1>
 
     </div>

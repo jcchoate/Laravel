@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row justify-content-center">
     <h1 class="title">New Video</h1>
-        <form method="POST" action="/videos">
+        <form method="POST" action="/video">
 
             {{csrf_field()}}
 
@@ -21,6 +21,14 @@
 
                 <div class="control">
                     <textarea name="description" class="textarea {{$errors->has('title') ? 'is-danger' : ''}}" value="{{ old('description') }}" required></textarea>
+                </div>
+            </div>
+
+            <div class="field">
+                <label for="categories" class="label">Category</label>
+
+                <div class="control">
+                    <textarea name="categories" class="textarea {{$errors->has('title') ? 'is-danger' : ''}}" value="{{ old('categories') }}" required></textarea>
                 </div>
             </div>
 

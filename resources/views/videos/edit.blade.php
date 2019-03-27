@@ -4,10 +4,10 @@
 <div class="container">
     <div class="row justify-content-center">
     <h1 class="title">Edit Videos</h1>
-        <form method="POST" action="/videos/{{$video->id}}">
+        <form method="POST" action="/video/{{$video->id}}">
 
-            {{ method_field('PATCH') }}
-            {{csrf_field()}}
+            @method('PATCH')
+            @csrf
 
             <div class="field">
                 <label for="name" class="label">Name</label>
@@ -30,10 +30,10 @@
             </div>
         
         </form>
-        <form method="POST" action="/videos/{{$video->id}}">
+        <form method="POST" action="/video/{{$video->id}}">
 
-            {{ method_field('DELETE') }}
-            {{ csrf_field() }}
+            @method('DELETE')
+            @csrf
 
             <div class="field">
                 <button type="submit" class="button">Delete Video</button>

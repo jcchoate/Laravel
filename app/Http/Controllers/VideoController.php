@@ -14,8 +14,13 @@ class VideoController extends Controller
      */
     public function index()
     {
-        $indexvideos = Video::all()->jsonSerialize();
-        return response($indexvideos);
+        $indexvideos = Video::all();
+
+        if(request()->has('groupBy')) {
+            return $indexvideos->groupBy( request('groupBy') );
+        }
+
+        return $indexvideos;
     }
 
     // For search bar
@@ -23,13 +28,13 @@ class VideoController extends Controller
     {
         $video = Video::all();
 
-        $search = \Request::get('search');
+        $search = request('search');
 
         $videos = Video::where('categories','like','%'.$search.'%')
         ->orderBy('categories')
         ->paginate(20);
 
-        return redirect('/categories',compact('videos'));
+        return $videos;
     }
 
     /**
@@ -50,13 +55,13 @@ class VideoController extends Controller
      */
     public function store(Request $request)
     {
-        request()->validate([
+        $attributes= request()->validate([
             'name'=>'required|min:3|max:64',
             'description'=>'required|min:3|max:1024',
             'categories'=>'required|min:3|max:50'
         ]);
-        Video::create(request(['name', 'description', 'category']));
-        return redirect('/Videos');
+        Video::create($attributes);
+        return redirect('/videos');
     }
 
     /**
@@ -76,9 +81,8 @@ class VideoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Video $video)
     {
-        $video = Video::find($id);
         return view('videos.edit', compact('video'));
     }
 
@@ -89,15 +93,14 @@ class VideoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Video $video)
     {
-        $video = Video::find($id);
-        $video->name = request('name');
-        $video->description = request('description');
-        $video->category = request('categories');
+        $video->name = request()->validate(['name'=>'required|min:3|max:64']);
+        $video->description = request()->validate(['description'=>'required|min:3|max:1024']);
+        $video->category = request()->validate(['categories'=>'required|min:3|max:50']);
         $video->save();
 
-        return redirect('/Videos');
+        return redirect('/videos');
     }
 
     /**
@@ -106,9 +109,9 @@ class VideoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Video $video)
     {
-        Video::find($id)->delete();
-        return redirect('/Videos');
+        $video->delete();
+        return redirect('/videos');
     }
 }

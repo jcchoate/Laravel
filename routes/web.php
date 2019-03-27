@@ -1,12 +1,11 @@
 <?php
 
 
-Route::resource('/videolist', 'VideoController')->middleware('auth','isAdmin');
-// Route::get('/search', 'VideoController@search')->middleware('auth');
+Route::resource('/video', 'VideoController')->middleware('auth','isAdmin');
 
 Auth::routes();
 
-Route::get('/settings/account', 'AccountsController@edit')->middleware('auth');
+Route::get('/settings/account', 'AccountsController@edit');
 Route::get('/auth', 'AccountsController@get');
 Route::put('/settings/account', 'AccountsController@update')->middleware('auth');
 

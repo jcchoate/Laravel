@@ -1,10 +1,14 @@
 
 <template>
-    <div class="mainspace">
+    <div class="text-center">
         <h1>VIDEOS</h1>
+        <form action="/video/create">
+            <button class="btn btn-primary" type="submit">Add New</button>
+        </form>
         <VideoIndexed 
             v-for="video in videos"
             :key="video.id"
+            v-bind:id="video.id"
             v-bind:name="video.name"
             v-bind:description="video.description"
             v-bind:category="video.categories"
@@ -25,7 +29,7 @@ import axios from 'axios';
         },
         methods: {
             getVideos() {
-               const videos = axios.get('/videolist').then(res => {
+               const videos = axios.get('/video').then(res => {
                    this.videos = res.data
                });
             }
