@@ -4,10 +4,8 @@
       <h3>{{this.$props.category[0].categories}}</h3>
     </button>
     <div class="dropdown-menu">
-      <div class="dropdown-item" v-for="video in this.$props.category" :key="video.id">
-        <h4>{{video.name}}</h4>
-        <br>
-        {{video.description}}
+      <div class="dropdown-item" v-for="course in this.$props.courses" :key="course.id">
+        <h4>{{course.name}}</h4>
       </div>
     </div>
     <!-- <div>
@@ -19,7 +17,7 @@
             
     </div>-->
     <form method="get" :action="`/video/${this.$props.id}/edit`">
-      <button class="btn btn-success" type="submit">Edit</button>
+      <button class="btn btn-primary" type="submit">Edit</button>
     </form>
   </div>
 </template>

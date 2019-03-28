@@ -37,7 +37,7 @@
                     <ul class="navbar-nav mr-auto">
                         <li><router-link to="/videos">Videos</router-link></li>
                         <li><router-link to="/categories">Categories</router-link></li>
-                        <li></li>
+                        <li><router-link to='/courses'>Courses</router-link></li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->

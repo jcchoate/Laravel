@@ -3,7 +3,7 @@
     <div class="text-center">
         <h1>VIDEOS</h1>
         <form action="/video/create">
-            <button class="btn btn-primary" type="submit">Add New</button>
+            <button class="btn btn-success" type="submit">Add New</button>
         </form>
         <VideoIndexed 
             v-for="video in videos"

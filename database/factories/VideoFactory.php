@@ -6,6 +6,6 @@ $factory->define(App\Video::class, function (Faker $faker) {
     return [
         "name"=>$faker->word,
         "description"=>$faker->sentence,
-        "categories"=> ['Cool', 'Informational', 'Educational', 'Vlog', 'Comedy', 'Popular'][rand(0,5)],
+        "categories"=> $faker->randomElement(['Cool', 'Informational', 'Educational', 'Vlog', 'Comedy', 'Popular']),
     ];
 });

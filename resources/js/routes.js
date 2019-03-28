@@ -1,6 +1,7 @@
 import Home from './components/Home.vue'
 import Videos from './components/Videos.vue'
 import Categories from './components/Categories.vue'
+import Courses from './components/Courses.vue'
 
 export default{
     mode: 'history',
@@ -18,6 +19,10 @@ export default{
         {
             path:'/categories',
             component:Categories
+        },
+        {
+            path:'/courses',
+            component:Courses
         }
     ]
 }

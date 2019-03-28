@@ -8,7 +8,7 @@
             <h5>Category:{{this.$props.category}}</h5>
         </div>
         <form method="get" :action="`/video/${this.$props.id}/edit`">
-            <button class="btn btn-success" type="submit">Edit</button>
+            <button class="btn btn-primary" type="submit">Edit</button>
         </form>
     </div>
 </template>

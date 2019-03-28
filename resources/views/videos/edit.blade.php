@@ -26,7 +26,15 @@
             </div>
 
             <div class="field">
-                <button type="submit" class="button is-link">Update Video</button>
+                <label for="category" class="label">Category</label>
+
+                <div class="control">
+                    <textarea name="category" class="textarea" value="{{$video->categories}}" required></textarea>
+                </div>
+            </div>
+
+            <div class="field">
+                <button type="submit" class="btn btn-primary">Update</button>
             </div>
         
         </form>
@@ -36,7 +44,7 @@
             @csrf
 
             <div class="field">
-                <button type="submit" class="button">Delete Video</button>
+                <button type="submit" class="btn btn-danger">Delete</button>
             </div>
         </form>
 </div>
