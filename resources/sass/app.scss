@@ -12,6 +12,11 @@
   background-color: rgba(255, 255, 255, 0);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
 }
-#app {
-    background-color: radial-gradient(#FF99AF,#FA60AD,#5EACF6);
+body{
+  background: radial-gradient(ellipse at right, #FA60AD, #5EACF6);
+  background-repeat: no-repeat;
+  background-size: 100vw 100vh
+}
+.navlog{
+  background-color: #FA60AD
 }
