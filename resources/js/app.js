@@ -15,7 +15,7 @@ Vue.component('Category', require('./components/Category.vue').default);
 Vue.component('VideoIndexed', require('./components/Video.vue').default);
 Vue.component('CourseComponent', require('./components/Course.vue').default);
 Vue.component('CourseIndex', require('./components/Courses.vue').default);
-Vue.component('Payment', require('./components/Payment.vue').default);
+Vue.component('Payment-Component', require('./components/Payment.vue').default);
 
 const app = new Vue({
     el: '#app',

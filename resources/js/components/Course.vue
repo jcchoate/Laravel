@@ -7,6 +7,7 @@
     <form method="get" :action="`/course/${this.$props.id}/edit`">
       <button class="btn btn-primary" type="submit">Edit</button>
     </form>
+    <Payment-Component></Payment-Component>
   </div>
 </template>
 

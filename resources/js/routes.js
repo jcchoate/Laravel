@@ -24,6 +24,10 @@ export default{
         {
             path:'/courses',
             component:Courses
+        },
+        {
+            path:'/payment-page',
+            component:Payment
         }
     ]
 }
