@@ -29,7 +29,7 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
-    <div id="app">
+    <div id="app" class="app-drop">
         <nav @guest class="navbar navbar-expand-md navbar-dark" @else class="navbar navbar-expand-md navbar-dark navlog" @endguest>
             <div class="container">
                 @guest
@@ -48,8 +48,7 @@
                         <div></div>
                         @else
                         <li><router-link to="/videos">Videos</router-link></li>
-                        <li><router-link to="/categories">Categories</router-link></li>
-                        <li><router-link to='/courses'>Courses</router-link></li>
+                        <li><router-link to="/categories">Courses</router-link></li>
                         @endguest
                     </ul>
 
@@ -58,7 +57,7 @@
                         <!-- Authentication Links -->
                         @guest
                             <li class="nav-item">
-                                <router-link class="nav-link" to="/courses">{{ __('COURSES') }}</router-link>
+                                <router-link class="nav-link" to="/categories">{{ __('COURSES') }}</router-link>
                             </li>
                             @if (Route::has('register'))
                                 <li class="nav-item">
@@ -94,7 +93,7 @@
         </nav>
 
         
-        <main class="py-4">
+        <main>
             <router-view></router-view>
         </main>
     </div>

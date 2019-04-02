@@ -1,8 +1,8 @@
 <?php
 
 
-Route::resource('/video', 'VideoController')->middleware('auth','isAdmin');
-Route::resource('/course', 'CourseController')->middleware('auth', 'isAdmin');
+Route::resource('/video', 'VideoController');
+Route::resource('/course', 'CourseController');
 
 Auth::routes();
 

@@ -1,11 +1,16 @@
 <template>
-  <div class="dropdown" id="app">
-    <button class="btn btn-terciary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown">
-      <h3>{{this.$props.category[0].categories}}</h3>
-    </button>
-    <div class="dropdown-menu">
-      <div class="dropdown-item" v-for="course in this.$props.courses" :key="course.id">
-        <h4>{{course.name}}</h4>
+  <div class="categories" id="app">
+    <h3>{{this.$props.category[0].categories}}</h3>
+    <div class="category-list">
+      <div class="category-item" v-for="categories in this.$props.category" :key="categories.id">
+        <div class="single-item">
+          <img
+            class="pigpic"
+            src="https://previews.123rf.com/images/taichesco/taichesco1303/taichesco130300015/18674439-a-small-crowd-of-pink-piggy-banks-viewed-from-behind-at-random-mode-stand-in-front-a-big-armored-pig.jpg"
+            alt="pigs"
+          >
+          <h4>{{categories.name}}</h4>
+        </div>
       </div>
     </div>
     <!-- <div>
@@ -16,15 +21,12 @@
         }}
             
     </div>-->
-    <form method="get" :action="`/video/${this.$props.id}/edit`">
-      <button class="btn btn-primary" type="submit">Edit</button>
-    </form>
   </div>
 </template>
 <script>
 export default {
   mounted() {
-    console.log("Component mounted.");
+    console.log(this.$props.category);
   },
   methods: {},
   props: ["category"]
@@ -35,5 +37,16 @@ export default {
 .box {
   background-color: rgb(197, 197, 197);
   margin: 20px;
+}
+.pigpic {
+  max-width: 100px;
+}
+.category-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.single-item{
+  margin: 20px
 }
 </style>

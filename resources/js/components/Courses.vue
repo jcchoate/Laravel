@@ -1,5 +1,5 @@
 <template>
-    <div class="text-center">
+    <div class="course-body text-center">
         <h1>COURSES</h1>
         <form action="/courses/create">
             <button class="btn btn-success" type="submit">Add New</button>
@@ -46,7 +46,9 @@ import axios from 'axios';
 </script>
 
 <style scoped>
-
+    .course-body{
+        background: white
+    }
 
 
 </style>

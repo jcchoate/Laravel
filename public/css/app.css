@@ -10660,13 +10660,13 @@ a.text-dark:focus {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
 }
 
-body {
-  background: radial-gradient(ellipse at right, #FA60AD, #5EACF6);
-  background-repeat: no-repeat;
-  background-size: 100vw 100vh;
+.navlog {
+  background-color: #FF99AF;
 }
 
-.navlog {
-  background-color: #FA60AD;
+.app-drop {
+  background: radial-gradient(ellipse at right, #FA60AD, #5EACF6);
+  background-repeat: no-repeat;
+  background-size: 100%;
 }
 
